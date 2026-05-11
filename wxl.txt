@@ -1,0 +1,484 @@
+Assign-01
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Details</title>
+</head>
+
+<body>
+
+<h1>My Personal Details</h1>
+
+<p><b>Name:</b> Rhigved Lad</p>
+
+<p><i>College:</i> ABC College of Engineering</p>
+
+<p><u>Branch:</u> Computer Engineering</p>
+
+<p><strong>Email:</strong> rhigved@gmail.com</p>
+
+<p><em>Phone:</em> 9876543210</p>
+
+<p><mark>Address:</mark> Solapur, Maharashtra</p>
+
+</body>
+</html>
+
+
+
+Assign-02
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Complete Webpage</title>
+</head>
+
+<body>
+
+<!-- Heading -->
+<h1 align="center">Welcome to My Webpage</h1>
+
+<!-- About Section -->
+<h2>About Me</h2>
+<p>
+Hello! My name is Student. This webpage demonstrates image,
+hyperlink and nested table using HTML.
+</p>
+
+<!-- Image Section -->
+<h2>My Image</h2>
+<img src="https://via.placeholder.com/250" alt="Sample Image">
+
+<!-- Hyperlink Section -->
+<h2>Useful Link</h2>
+<p>Click below to visit Google:</p>
+<a href="https://www.google.com">Open Google Website</a>
+
+<!-- Main Table -->
+<h2>Student Information</h2>
+
+<table border="1" width="60%">
+<tr>
+<th>Name</th>
+<th>Details</th>
+</tr>
+
+<tr>
+<td>Rhigved</td>
+
+<td>
+
+<!-- Nested Table -->
+<table border="1">
+<tr>
+<th>Subject</th>
+<th>Marks</th>
+</tr>
+
+<tr>
+<td>HTML</td>
+<td>85</td>
+</tr>
+
+<tr>
+<td>CSS</td>
+<td>80</td>
+</tr>
+
+</table>
+
+</td>
+</tr>
+
+</table>
+
+<!-- Footer -->
+<h3 align="center">Thank You For Visiting</h3>
+
+</body>
+</html>
+
+
+
+Assign-03
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Form</title>
+</head>
+
+<body>
+
+<h2 align="center">Student Registration Form</h2>
+
+<form>
+
+<!-- Name -->
+<label>Name:</label><br>
+<input type="text" name="name"><br><br>
+
+<!-- Email -->
+<label>Email:</label><br>
+<input type="email" name="email"><br><br>
+
+<!-- Gender -->
+<label>Gender:</label><br>
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+<input type="radio" name="gender"> Other
+<br><br>
+
+<!-- Date of Birth -->
+<label>Date of Birth:</label><br>
+<input type="date" name="dob"><br><br>
+
+<!-- Submit Button -->
+<input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
+
+
+
+Assign-04
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>CSS Types Example</title>
+
+<!-- INTERNAL CSS -->
+<style>
+h2{
+    color: blue;
+    text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+    width: 60%;
+}
+
+th{
+    background-color: lightgray;
+}
+</style>
+
+<!-- EXTERNAL CSS LINK -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- INLINE CSS -->
+<h1 style="color:red; text-align:center;">
+CSS Styling Example
+</h1>
+
+<h2>Student Table</h2>
+
+<table border="1" align="center">
+<tr>
+<th>Name</th>
+<th>Marks</th>
+</tr>
+
+<tr>
+<td>Rahul</td>
+<td>85</td>
+</tr>
+
+<tr>
+<td>Priya</td>
+<td>90</td>
+</tr>
+
+</table>
+
+</body>
+</html>
+
+
+
+Assign-06
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation</title>
+
+<script>
+function validateForm() {
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+
+    // Empty field validation
+    if (name == "" || email == "") {
+        alert("All fields must be filled!");
+        return false;
+    }
+
+    // Email format validation
+    var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (!email.match(emailPattern)) {
+        alert("Enter valid email address!");
+        return false;
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+}
+</script>
+
+</head>
+
+<body>
+
+<h2 align="center">Registration Form</h2>
+
+<form onsubmit="return validateForm()">
+
+Name:<br>
+<input type="text" id="name"><br><br>
+
+Email:<br>
+<input type="text" id="email"><br><br>
+
+<input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
+
+
+
+Assign-07
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM Example</title>
+
+<script>
+function changeContent() {
+
+    // Access element using DOM
+    var element = document.getElementById("demo");
+
+    // Change content dynamically
+    element.innerHTML = "Welcome! Content changed using DOM.";
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Dynamic Content Using DOM</h2>
+
+<p id="demo">Click the button to change this text.</p>
+
+<button onclick="changeContent()">Click Me</button>
+
+</body>
+</html>
+
+
+
+Assign-08
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Calculator</title>
+
+<script>
+
+function calculate() {
+
+    var num1 = parseFloat(document.getElementById("n1").value);
+    var num2 = parseFloat(document.getElementById("n2").value);
+    var operator = document.getElementById("op").value;
+
+    var result;
+
+    switch(operator) {
+
+        case "+":
+            result = num1 + num2;
+            break;
+
+        case "-":
+            result = num1 - num2;
+            break;
+
+        case "*":
+            result = num1 * num2;
+            break;
+
+        case "/":
+            result = num1 / num2;
+            break;
+
+        default:
+            result = "Invalid Operation";
+    }
+
+    document.getElementById("result").innerHTML =
+        "Result = " + result;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2 align="center">Simple Calculator</h2>
+
+Number 1:
+<input type="number" id="n1"><br><br>
+
+Number 2:
+<input type="number" id="n2"><br><br>
+
+Operation:
+<select id="op">
+<option value="+">Addition</option>
+<option value="-">Subtraction</option>
+<option value="*">Multiplication</option>
+<option value="/">Division</option>
+</select>
+
+<br><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<p id="result"></p>
+
+</body>
+</html>
+
+
+
+Assign-09
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+    <?php
+    echo "<h2>welcome to php</h2>";
+    echo "date  and time is ". date("d-m-y h:i:s A");
+    ?>
+
+
+</body>
+</html>
+
+
+
+Assign-10
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>POST Method Example</title>
+</head>
+
+<body>
+
+    <form method="POST">
+        Enter Name:
+        <input type="text" name="username">
+        <br><br>
+        Age:
+        <input type="number" name="age">
+        <br><br>
+        Year:
+        <input type="number" name="year">
+        <br><br>
+        number:
+        <input type="number" name="phone">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <?php
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{
+    $name = $_POST['username'];
+    $age = $_POST['age'];
+    $year = $_POST['year'];
+    $phone = $_POST['phone'];
+
+    echo "<h3>Welcome, $name  age is $age year is $year and number is $phone</h3>";
+}
+?>
+
+</body>
+</html>
+
+
+
+Assign-11
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Manipulation</title>
+</head>
+<body>
+
+<?php
+$str = "Hello PHP";
+
+echo "Original String: $str <br><br>";
+
+echo "String Length: " . strlen($str) . "<br><br>";
+
+echo "Reversed String: " . strrev($str) . "<br><br>";
+
+echo "Substring: " . substr($str, 0, 5);
+?>
+
+</body>
+</html>
+
+Assign-12
+
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Arrays</title>
+</head> 
+<body style= "text-align:center; font-size:0.75cm; background-color:green;">
+    <?php
+    $fruits=array("kiwis", "pineapple", "coconut", "muskmelon", "apple");
+
+    echo"<h3>fruits list</h3>";
+    
+    foreach($fruits as $fruit)
+        {
+            echo"$fruit<br><br>";
+        }
+    ?>
+        
+        
+    </body>
+</html>
+
